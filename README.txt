@@ -1,0 +1,2 @@
+Logré agregar el archivo gitignore (por eso tuve que volver a crear el repositorio, no supe hacerlo de otra manera)
+Perdón por las molestias, pero ahora sí podemos trabajar con Unity, antes no se podía.

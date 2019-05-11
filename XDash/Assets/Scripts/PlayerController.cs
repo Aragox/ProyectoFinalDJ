@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        gameObject.transform.Translate(5f * Time.deltaTime, 0, 0);
+        gameObject.transform.Translate(-1 * GameControl.instance.scrollSpeed * Time.deltaTime, 0, 0);
+        if (Input.GetKey("up"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 1000f * Time.deltaTime));
+        }
 	}
 }
+

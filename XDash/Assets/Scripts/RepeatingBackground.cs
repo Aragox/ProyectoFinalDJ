@@ -13,7 +13,8 @@ public class RepeatingBackground : MonoBehaviour
         //Get and store a reference to the collider2D attached to Ground.
         groundCollider = GetComponent<BoxCollider2D>();
         //Store the size of the collider along the x axis (its length in units).
-        groundHorizontalLength = groundCollider.size.x;
+        //groundHorizontalLength = groundCollider.size.x;
+        groundHorizontalLength = 17.76f;
     }
 
     //Update runs once per frame

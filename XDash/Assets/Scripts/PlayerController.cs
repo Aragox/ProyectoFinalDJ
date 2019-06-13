@@ -6,10 +6,10 @@ public class PlayerController : MonoBehaviour {
 
     public float high = 0.1f;
     public GameObject player;
+    public Rigidbody2D rb2;
 
     // Use this for initialization
     void Start () {
-
     }
 	
 	// Update is called once per frame
@@ -67,5 +67,14 @@ public class PlayerController : MonoBehaviour {
             player.gameObject.GetComponent<Animator>().SetFloat("fire", 0.001f);
         }
     }
-}
+
+    private void FixedUpdate() {
+        if (Input.GetKey(KeyCode.I)){
+            Vector3 theScale = transform.localScale;
+            theScale.y *= -1;
+            transform.localScale = theScale;
+            rb2.gravityScale = -1;
+        }
+    }
+    }
 

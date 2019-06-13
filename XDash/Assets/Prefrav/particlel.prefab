@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212033621546624418}
   - component: {fileID: 58861426632275072}
   - component: {fileID: 50092291331960132}
+  - component: {fileID: 114209680074508162}
   m_Layer: 0
   m_Name: particlel
   m_TagString: Untagged
@@ -77,6 +78,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15684967
+--- !u!114 &114209680074508162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534185822442260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82cf9ee611eab24583e0c4c01adafb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!212 &212033621546624418
 SpriteRenderer:
   m_ObjectHideFlags: 1

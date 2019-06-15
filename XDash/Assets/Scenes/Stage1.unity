@@ -280,6 +280,8 @@ GameObject:
   - component: {fileID: 90425132}
   - component: {fileID: 90425134}
   - component: {fileID: 90425133}
+  - component: {fileID: 90425136}
+  - component: {fileID: 90425135}
   m_Layer: 0
   m_Name: BugSpawner
   m_TagString: Untagged
@@ -300,7 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bugPrefab: {fileID: 1903168797095386, guid: 124b23ed1425b3e4a96d9d6f1b36a317, type: 2}
   yPositionLimit: 2.7
-  respawnTime: 3
+  respawnTime: 100
 --- !u!4 &90425131
 Transform:
   m_ObjectHideFlags: 0
@@ -327,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bugPrefab: {fileID: 1719628587713336, guid: cc597429adfae7246a090059a7c5998b, type: 2}
   yPositionLimit: 2.7
-  respawnTime: 10
+  respawnTime: 100
 --- !u!114 &90425133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bugPrefab: {fileID: 1131241632066714, guid: e9aba5b00f6b30a4dad41cf553f004df, type: 2}
   yPositionLimit: 2.7
-  respawnTime: 2
+  respawnTime: 100
 --- !u!114 &90425134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,7 +357,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bugPrefab: {fileID: 1534185822442260, guid: f0877313df51b1d4ebd4a290871261f4, type: 2}
   yPositionLimit: 2.7
-  respawnTime: 5
+  respawnTime: 1
+--- !u!114 &90425135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 90425129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efff2972b5f046142b864405da182633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugPrefab: {fileID: 1319024629115384, guid: 1af2b595a353e5848b29957bc140db97, type: 2}
+  yPositionLimit: 2.5
+  respawnTime: 100
+--- !u!114 &90425136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 90425129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efff2972b5f046142b864405da182633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bugPrefab: {fileID: 1083856221798920, guid: faa88a83f87b9ed4bbd0b15b367486db, type: 2}
+  yPositionLimit: 2.5
+  respawnTime: 100
 --- !u!1 &136434940
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,6 +3500,7 @@ GameObject:
   - component: {fileID: 1606813957}
   - component: {fileID: 1606813958}
   - component: {fileID: 1606813959}
+  - component: {fileID: 1606813960}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3549,7 +3580,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   high: 0.1
   player: {fileID: 1606813953}
-  rb2: {fileID: 0}
 --- !u!50 &1606813957
 Rigidbody2D:
   serializedVersion: 4
@@ -3564,7 +3594,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3613,6 +3643,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1606813960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1606813953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a891c35fcbc1cbf4db062fcdc3ce4010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potion: 0
+  particiel: 0
+  player: {fileID: 1606813953}
+  playerDeath: {fileID: 1306752797934182, guid: 038b655b7b9b9c0469e2fab9080b4cd0,
+    type: 2}
+  rb2: {fileID: 1606813957}
 --- !u!1 &1620390656
 GameObject:
   m_ObjectHideFlags: 0

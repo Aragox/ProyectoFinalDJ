@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4412403977232848}
   - component: {fileID: 212098147109497198}
-  - component: {fileID: 61415908765274736}
   - component: {fileID: 50479200362052612}
   - component: {fileID: 114238824043160626}
+  - component: {fileID: 61640439864163056}
   m_Layer: 0
   m_Name: potion
-  m_TagString: Untagged
+  m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61415908765274736
+--- !u!61 &61640439864163056
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

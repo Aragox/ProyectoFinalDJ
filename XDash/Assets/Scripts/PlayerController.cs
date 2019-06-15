@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour {
 
     public float high = 0.1f;
     public GameObject player;
-    public Rigidbody2D rb2;
 
     // Use this for initialization
     void Start () {
@@ -32,18 +31,26 @@ public class PlayerController : MonoBehaviour {
             player.gameObject.GetComponent<Animator>().SetBool("onDash", false);
 
         }
-        else if (Input.GetKey("down") || Input.GetKey(KeyCode.S) &&  player.gameObject.GetComponent<Animator>().GetBool("dash") && !player.gameObject.GetComponent<Animator>().GetBool("onDash"))
+        /*else if (Input.GetKey("down") || Input.GetKey(KeyCode.S) &&  player.gameObject.GetComponent<Animator>().GetBool("dash") && !player.gameObject.GetComponent<Animator>().GetBool("onDash"))
         {
-            player.gameObject.GetComponent<Animator>().SetBool("dash", false);
+            //player.gameObject.GetComponent<Animator>().SetBool("dash", false);
             player.gameObject.GetComponent<Animator>().SetBool("onDash", true);
             player.gameObject.transform.position = new Vector3(0, -2.81f, 0);
-        }
-       /* else if (player.gameObject.GetComponent<Animator>().GetBool("onFloor"))
+            Debug.Log("asd1");
+        }*/
+        else if (Input.GetKey("down") || Input.GetKey(KeyCode.S) && player.gameObject.GetComponent<Animator>().GetBool("dash") || player.gameObject.GetComponent<Animator>().GetBool("onDash"))
         {
             player.gameObject.GetComponent<Animator>().SetBool("dash", false);
             player.gameObject.GetComponent<Animator>().SetBool("onDash", false);
-            player.gameObject.transform.position = new Vector3(0, -2.2f, 0);
-        }*/
+            player.gameObject.transform.position = new Vector3(0, -2.81f, 0);
+            Debug.Log("asd2");
+        }
+        /* else if (player.gameObject.GetComponent<Animator>().GetBool("onFloor"))
+         {
+             player.gameObject.GetComponent<Animator>().SetBool("dash", false);
+             player.gameObject.GetComponent<Animator>().SetBool("onDash", false);
+             player.gameObject.transform.position = new Vector3(0, -2.2f, 0);
+         }*/
 
         if (Input.GetKey(KeyCode.Space) && !player.gameObject.GetComponent<Animator>().GetBool("fire") && player.gameObject.GetComponent<Animator>().GetBool("onFloor"))
         {
@@ -68,13 +75,15 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void FixedUpdate() {
+    /*private void FixedUpdate() {
         if (Input.GetKey(KeyCode.I)){
             Vector3 theScale = transform.localScale;
             theScale.y *= -1;
             transform.localScale = theScale;
             rb2.gravityScale = -1;
         }
-    }
-    }
+    }*/
+
+
+}
 

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114209680074508162}
   m_Layer: 0
   m_Name: particlel
-  m_TagString: Untagged
+  m_TagString: Particiel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82cf9ee611eab24583e0c4c01adafb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
 --- !u!212 &212033621546624418
 SpriteRenderer:
   m_ObjectHideFlags: 1

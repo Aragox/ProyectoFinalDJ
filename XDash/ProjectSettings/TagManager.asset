@@ -8,6 +8,8 @@ TagManager:
   - Particiel
   - Potion
   - Flame
+  - Floor
+  - Roof
   layers:
   - Default
   - TransparentFX

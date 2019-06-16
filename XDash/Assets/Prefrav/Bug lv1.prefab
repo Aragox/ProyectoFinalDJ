@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95679976529061446}
   - component: {fileID: 50719448028560890}
   - component: {fileID: 114072247121664262}
+  - component: {fileID: 114066048517811924}
   m_Layer: 0
   m_Name: Bug lv1
   m_TagString: Bug
@@ -107,6 +108,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114066048517811924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1903168797095386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a891c35fcbc1cbf4db062fcdc3ce4010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potion: 0
+  particiel: 0
+  death: {fileID: 1150209240670034, guid: c9b8252ce4a5eb247a1c3e910a714d87, type: 2}
+  ripped: {fileID: 1903168797095386}
+  rb2: {fileID: 50719448028560890}
 --- !u!114 &114072247121664262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f18cbe2ce1c7f4bb0b760495a58f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   speed: 2
+  bugDeath: {fileID: 1291365375307216, guid: c9b8252ce4a5eb247a1c3e910a714d87, type: 2}
 --- !u!212 &212848562199619898
 SpriteRenderer:
   m_ObjectHideFlags: 1

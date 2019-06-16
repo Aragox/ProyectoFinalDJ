@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 114385365488946448}
   m_Layer: 0
   m_Name: Bug lv2
-  m_TagString: Untagged
+  m_TagString: Bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   death: {fileID: 1821643644348326, guid: 1732ba3ff5ded8e4dba062e6d7f074a8, type: 2}
   ripped: {fileID: 1719628587713336}
   rb2: {fileID: 50466197589742888}
+  canvas: {fileID: 0}
 --- !u!114 &114545959753233646
 MonoBehaviour:
   m_ObjectHideFlags: 1

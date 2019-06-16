@@ -7,6 +7,7 @@ public class Collision : MonoBehaviour {
     public GameObject death;
     public GameObject ripped;
     public Rigidbody2D rb2;
+    public Canvas canvas;
 
     void OnCollisionEnter2D(Collision2D collisionInfo) {
         
@@ -15,6 +16,7 @@ public class Collision : MonoBehaviour {
             Instantiate(death, transform.position, transform.rotation);
             Destroy(ripped);
             ripped.SetActive(false);
+            canvas.gameObject.SetActive(true); 
         }
         else if ((collisionInfo.collider.tag == "Flame") && (this.tag == "Bug"))
         {
@@ -35,6 +37,30 @@ public class Collision : MonoBehaviour {
         else if ((collisionInfo.collider.tag == "Potion") && (this.tag == "Player")) {
             Debug.Log(collisionInfo.collider.tag);
             potion += 1;
+        }
+        else if (collisionInfo.collider.tag == "Floor")
+        {
+            if (particiel)
+            {
+                ripped.gameObject.GetComponent<Animator>().SetBool("onFloor", false);
+                ripped.gameObject.GetComponent<Animator>().SetBool("onDash", false);
+            }
+            else
+            {
+                ripped.gameObject.GetComponent<Animator>().SetBool("onFloor", true);
+            }
+        }
+        else if (collisionInfo.collider.tag == "Roof")
+        {
+            if (particiel)
+            {
+                ripped.gameObject.GetComponent<Animator>().SetBool("onFloor", true);
+            }
+            else
+            {
+                ripped.gameObject.GetComponent<Animator>().SetBool("onFloor", false);
+                ripped.gameObject.GetComponent<Animator>().SetBool("onDash", false);
+            }
         }
     }
 }

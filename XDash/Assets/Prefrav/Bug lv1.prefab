@@ -124,6 +124,7 @@ MonoBehaviour:
   death: {fileID: 1150209240670034, guid: c9b8252ce4a5eb247a1c3e910a714d87, type: 2}
   ripped: {fileID: 1903168797095386}
   rb2: {fileID: 50719448028560890}
+  canvas: {fileID: 0}
 --- !u!114 &114072247121664262
 MonoBehaviour:
   m_ObjectHideFlags: 1

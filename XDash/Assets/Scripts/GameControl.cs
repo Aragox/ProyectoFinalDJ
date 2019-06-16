@@ -8,6 +8,7 @@ public class GameControl : MonoBehaviour {
     public static GameControl instance;
     public GameObject gameOverText;
     public bool gameOver = false;
+    public Canvas canvas;
     public float scrollSpeed;
 
     //For initialization
@@ -16,7 +17,9 @@ public class GameControl : MonoBehaviour {
         if (instance == null)
         {
             instance = this;
-        }else if (instance != this)
+            canvas.gameObject.SetActive(false);
+        }
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -33,6 +36,7 @@ public class GameControl : MonoBehaviour {
 
     public void PlayerDied()
     {
+        canvas.gameObject.SetActive(true);
         gameOverText.SetActive(true);
         gameOver = true;
     }
